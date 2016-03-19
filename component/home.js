@@ -19,14 +19,14 @@ var styles = StyleSheet.create({
   }
 });
 
-var Header = React.createClass({
+var Home = React.createClass({
   render: function() {
     return (
       <View style={styles.container}>
-        <Text>首页</Text>  
+        <Text>我是首页</Text>  
       </View>
     );
   }
 });
 
-module.exports = Header;
+module.exports = Home;

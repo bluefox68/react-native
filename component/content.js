@@ -1,12 +1,14 @@
 'use strict';
 var React = require('react-native');
+
 var {
   AppRegistry,
   ListView,
   View,
   Text,
   Image,
-  StyleSheet
+  StyleSheet,
+  NavigatorIOS
 } = React;
 
 var styles = StyleSheet.create({
@@ -24,7 +26,7 @@ var Content = React.createClass({
   render: function() {
     return (
       <View style={styles.container}>
-        <Text>内容</Text>  
+       
       </View>
     );
   }

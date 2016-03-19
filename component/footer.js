@@ -15,7 +15,7 @@ var styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems:'center',
     flexDirection: 'row',
-    backgroundColor: '#ff0000'
+    backgroundColor: '#00ff00'
   }
 });
 

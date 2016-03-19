@@ -1,9 +1,6 @@
 'use strict';
 var React = require('react-native');
-
-var Header = require("./component/header");
-var Content = require("./component/content");
-var Footer = require("./component/footer");
+var Home = require("./component/home");
 
 var {
   AppRegistry,
@@ -11,7 +8,8 @@ var {
   View,
   Text,
   Image,
-  StyleSheet
+  StyleSheet,
+  NavigatorIOS
 } = React;
 
 var styles = StyleSheet.create({
@@ -26,12 +24,16 @@ var react = React.createClass({
   render: function() {
     return (
       <View style={styles.container}>
-        <Header />
-        <Content />
-        <Footer />     
+        <NavigatorIOS
+          initialRoute={{
+            component: Home,
+            title: '首页'
+          }}
+        /> 
       </View>
     );
   }
 });
+
 
 AppRegistry.registerComponent('react', () => react);
