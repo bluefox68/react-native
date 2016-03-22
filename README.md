@@ -12,7 +12,6 @@ https://github.com/vczero/React-Native-App
 
 currentSelected:
 
-
 # 首页
 部门
 人员
@@ -38,49 +37,40 @@ reducer的作用:根据action和旧的state来更新旧的state
 
 
 # state:
-## 首页
-title:
-list:[{
-  department:""
-}]
 
-title:
-list:[{
-  member:
-  department:
-  tel:
-  email:
-}]
-## 公告
-title:
-query:
-list:[{
-  title:"",
-  time:"",
-  member:""
-}]
-
-title:
-content:"",
-member:
-time:
-
-## 关于
-title:
-[{
-  icon:
-  text:
-}]
-
-## end
-title:
-activePage:
-isBack:
+title:"",
+pageVisibilityFilter:"",
+backBtnVisibilityFilter:""
 backItem:{
-  text:
-  icon:
+  text:''
+  icon:''
+},
+data:{
+  "home":[{
+    id:"",
+    department:"",
+    member:[{
+      id:""
+      author:
+      tel:
+      email:
+    }]
+  }],
+  "notice":{
+    noticeVisibilityFilter:
+    list:[{
+      id:"",
+      title:"",
+      author:"",
+      time:"",
+      content:""
+    }]
+  },
+  "about":[{
+    icon:
+    text:
+  }]
 }
-
 
 # action
 ## 首页
@@ -97,6 +87,9 @@ deleteContact
 publishNotice
 
 loginout
+
+
+
 
 
 
