@@ -1,6 +1,9 @@
-'use strict';
-var React = require('react-native');
-var Home = require("./component/home");
+import React from 'react-native';
+// import { createStore } from 'redux';
+// import { Provider } from 'react-redux';
+
+import App from './container/app';
+// import reducers from './reducer/reducer';
 
 var {
   AppRegistry,
@@ -8,32 +11,18 @@ var {
   View,
   Text,
   Image,
-  StyleSheet,
-  NavigatorIOS
+  StyleSheet
 } = React;
 
-var styles = StyleSheet.create({
-  container: {
-    flex: 3,
-    flexDirection: 'column',
-    backgroundColor: '#F5FCFF',
-  }
-});
-
+// let store = createStore(reducers);
 var react = React.createClass({
   render: function() {
     return (
-      <View style={styles.container}>
-        <NavigatorIOS
-          initialRoute={{
-            component: Home,
-            title: '首页'
-          }}
-        /> 
-      </View>
+      // <Provider store={store}>
+        <App />
+      // </Provider>
     );
   }
 });
-
 
 AppRegistry.registerComponent('react', () => react);
